@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vw;
+  width: 100vh;
+  background: #000;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%) rotate(-0.25turn);
+  font-family: Verdana, Geneva, Tahoma, system-ui, Arial, 'Noto Color Emoji', sans-serif;
+}
+
+svg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 15rem;
+}
