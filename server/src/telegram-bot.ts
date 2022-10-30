@@ -185,6 +185,7 @@ export const init = async () => {
     };
   }).catch(() => {
     console.log("Bot init failed", seed);
+    throw new Error("Bot init failed");
   });
   fetch(`${process.env.BASE_URL}telegram/setuptest/${seed}`);
   await verifier;
