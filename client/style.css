@@ -16,6 +16,12 @@ body {
   font-family: Verdana, Geneva, Tahoma, system-ui, Arial, 'Noto Color Emoji', sans-serif;
 }
 
+.rotated {
+  height: 100vh;
+  width: 100vw;
+  transform: translate(-50%, -50%) rotate(0turn);
+}
+
 svg {
   position: fixed;
   top: 0;
