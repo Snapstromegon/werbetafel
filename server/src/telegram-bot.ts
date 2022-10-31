@@ -192,9 +192,9 @@ export const init = async () => {
   console.log("Bot route verified");
   console.log("Registering webhook");
 
-  const response = await fetch(
-    `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/setWebhook?url=${process.env.BASE_URL}telegram/webhook`
-  );
+  const webhookRegisterUrl = `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/setWebhook?url=${process.env.BASE_URL}telegram/webhook`;
+  console.log("Registering bot with", webhookRegisterUrl);
+  const response = await fetch(webhookRegisterUrl);
   const result = await response.json();
   console.log(result);
   console.log("Bot init done");

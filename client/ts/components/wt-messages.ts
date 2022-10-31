@@ -86,7 +86,7 @@ export default class WTMessages extends LitElement {
     super.connectedCallback();
     this.loadMessages();
     setInterval(() => this.loadMessages(), 10000);
-    // setInterval(() => this.nextImage(), 3000);
+    setInterval(() => this.nextImage(), 10000);
   }
 
   nextImage() {

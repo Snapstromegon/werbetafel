@@ -5,7 +5,12 @@ import { Message, Photo, User, Video, VideoNote } from "./db_types.js";
 import fastifyReplyFrom from "@fastify/reply-from";
 
 export const fastifyPlugin: FastifyPluginAsync = async (fastify, opts) => {
-  fastify.register(fastifyReplyFrom, { undici: {} });
+  fastify.register(fastifyReplyFrom, {
+    undici: {
+      pipelining: 5,
+      keepAliveTimeout: 60 * 1000,
+    },
+  });
   fastify.register(cors);
   fastify.get("/messages", async (request) => {
     const query = request.query as { from?: string };
@@ -53,13 +58,14 @@ export const fastifyPlugin: FastifyPluginAsync = async (fastify, opts) => {
 
   fastify.get("/file/:fileId", (request, reply) => {
     const fileId = (request.params as { fileId: string }).fileId;
+    console.log("Requested file", fileId);
     fetch(
       `https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/getFile?file_id=${fileId}`
     )
       .then((response) => response.json())
       .then((result) => {
-        const filePath = result.result.file_path;
-        console.log("Requested file", fileId, filePath);
+        const filePath = result?.result?.file_path;
+        console.log("Respond with file", fileId, filePath, result);
         reply.from(
           `https://api.telegram.org/file/bot${process.env.TELEGRAM_BOT_TOKEN}/${filePath}`
         );

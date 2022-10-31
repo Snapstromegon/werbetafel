@@ -1,13 +1,36 @@
 export default {
-  all: ["Ist das alles?", "Dankeschön <3", "Viel Spaß in der Warteschlange!"],
-  animation: ["Hahahahaha, nein!", "GIFs sind doch echt was tolles."],
+  all: [
+    "Ist das alles?",
+    "Dankeschön <3",
+    "Viel Spaß in der Warteschlange!",
+    "Ein gaaaaaaanz toller Beitrag...",
+    "Der Inhalt ist und bleibt ein Rätsel.",
+    "Beep Boop, Computer sagt Nein!",
+    "Chrrrrrrrr, Nachricht erfolgreich geschreddert!",
+    "Error 418: I'm a teapot 🫖",
+    "Error 402: Ihre kostenlosen Nachrichten sind aufgebraucht!",
+    "Warnung, wir verwenden Cookies, hier ist einer für dich 🍪.",
+    "*Hier bitte Verachtung einfügen*",
+    "*Hier bitte Lobpreisung einfügen*",
+    "Danke {nutzer.name} für diesen geistreichen Beitrag!",
+  ],
+  animation: [
+    "Hahahahaha, nein!",
+    "GIFs sind doch echt was tolles.",
+    "Als nächstes bitte eins mit Minions!",
+  ],
   photo: [
     "Hübsche Dame!",
     "Netter Kerl!",
     "Für Videos musst du gedrückt halten...",
     "Sind das Zombies oder Affen oder keins von beidem?",
-    "Sicher, dass das das richtige Bild war?"
+    "Sicher, dass das das richtige Bild war?",
+    "Uff, damit soll ich jetzt arbeiten?",
+    "Das kommt auf einen Bildschirm und nicht eine Tasse!",
   ],
   videoNote: ["An den falschen Knopf gekommen?"],
-  video: ["Du weißt schon, dass das Ding eh keinen Ton abspielt?"],
+  video: [
+    "Du weißt schon, dass das Ding eh keinen Ton abspielt?",
+    "Hmmmm, kann ich nicht abspielen :(",
+  ],
 };
